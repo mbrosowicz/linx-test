@@ -110,7 +110,6 @@ body {
     width: 190px;
     box-sizing: border-box;
     background-size: 100% auto;
-    background-attachment: fixed;
     background-position: center center;
     display: inline-block;
     flex-shrink: 0;
