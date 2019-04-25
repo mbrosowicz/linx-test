@@ -1,4 +1,4 @@
-# Linx Display Slider Test
+# Linx Window Display Slider Test
 
 A window display slider that I made for a job opportunity.
 
@@ -25,4 +25,3 @@ Start the project
 ```
 npm start
 ```
-
