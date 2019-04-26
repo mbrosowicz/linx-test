@@ -1,342 +1,351 @@
 @charset "UTF-8";
 
 body {
-    font-family: 'Roboto', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-    min-height: 100vh;
-    margin: 0;
+  font-family: "Roboto", "Arial", "Geneva", "Helvetica", sans-serif;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .detail-link {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .red-font {
-    color: #CC0000;
+  color: #cc0000;
 }
 
 .common-font {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .big-font {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .bold-font {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .block-display {
-    display: block;
+  display: block;
 }
 
 .slide {
-    padding: 5px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  padding: 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .item-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
-    user-drag: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
 }
 
 .slider-block {
-    width: 850px;
-    height: 375px;
-    border-radius: 10px;
-    border: 2px lightgray;
-    border-style: solid;
+  width: 850px;
+  height: 375px;
+  border-radius: 10px;
+  border: 2px lightgray;
+  border-style: solid;
 }
 
 .visited-item-content {
-    width: 190px;
-    float: left;
-    border-right-style: solid;
-    border-right-color: lightgray;
-    border-right-width: 1px;
+  width: 190px;
+  float: left;
+  border-right-style: solid;
+  border-right-color: lightgray;
+  border-right-width: 1px;
 }
 
 .recommended-items-content {
-    width: 67%;
-    height: 305px;
-    overflow: hidden;
-    margin-left: 40px;
+  width: 67%;
+  height: 305px;
+  overflow: hidden;
+  margin-left: 40px;
 }
 
-
 @-moz-document url-prefix() {
-    .recommended-items-content {
-        height: 280px;
-    }
+  .recommended-items-content {
+    height: 280px;
+  }
 }
 
 .slide:hover {
-    background-image: linear-gradient(to bottom, #E6F3FC, #FFF);
+  background-image: linear-gradient(to bottom, #e6f3fc, #fff);
 }
 
 .slide:hover img {
-    border-style: solid;
-    border-width: 2px;
-    border-color: lightgray;
+  border-style: solid;
+  border-width: 2px;
+  border-color: lightgray;
 }
 
-.recommended-items-content>div.slides {
-    --n: 0;
-    --i: 0;
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 92%;
-    margin-left: 0.5px;
-    transform: translate(calc(var(--i)/var(--n)*-365%));
-    -webkit-transform: translate(calc(var(--i)/var(--n)*-365%));
-    transition: transform 0.5s linear;
-    will-change: transform;
+.recommended-items-content > div.slides {
+  --n: 0;
+  --i: 0;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 92%;
+  margin-left: 0.5px;
+  transform: translate(calc(var(--i) / var(--n) * -365%));
+  -webkit-transform: translate(calc(var(--i) / var(--n) * -365%));
+  transition: transform 0.5s linear;
+  will-change: transform;
 }
 
-.recommended-items-content>div.slides>div.slide {
-    width: 190px;
-    box-sizing: border-box;
-    background-size: 100% auto;
-    background-position: center center;
-    display: inline-block;
-    flex-shrink: 0;
+.recommended-items-content > div.slides > div.slide {
+  width: 190px;
+  box-sizing: border-box;
+  background-size: 100% auto;
+  background-position: center center;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .item-description {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .item-description {
-        white-space: normal;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-    }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .item-description {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
 }
 
 @-moz-document url-prefix() {
-    .item-description {
-        white-space: nowrap;
-        display: block;
-    }
+  .item-description {
+    white-space: nowrap;
+    display: block;
+  }
 }
 
 .visited-item-content,
 .recommended-items-content,
-.items-header>span {
-    display: inline-block;
+.items-header > span {
+  display: inline-block;
 }
 
 .items-header {
-    background-color: #e7f2fc;
-    color: #006699;
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 10px 10px 0px 0px;
-    margin-bottom: 5px;
+  background-color: #e7f2fc;
+  color: #006699;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px 10px 0px 0px;
+  margin-bottom: 5px;
 }
 
-.items-header>span {
-    margin: 10px;
+.items-header > span {
+  margin: 10px;
 }
 
-.items-header>span.recommended-items-header-text {
-    margin-left: 25vw;
+.items-header > span.recommended-items-header-text {
+  margin-left: 25vw;
 }
 
 @media only screen and (min-width: 991px) {
-    .items-header>span.recommended-items-header-text {
-        margin-left: 7vw;
-    }
+  .items-header > span.recommended-items-header-text {
+    margin-left: 7vw;
+  }
 }
 
 a[class|="arrow"] {
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    top: 25%;
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: 25%;
 }
 
 @media only screen and (min-height: 895px) {
-    a[class|="arrow"] {
-        top: 20%;
-    }
+  a[class|="arrow"] {
+    top: 20%;
+  }
 }
 
 @media only screen and (min-height: 940px) {
-    a[class|="arrow"] {
-        top: 15%;
-    }
+  a[class|="arrow"] {
+    top: 15%;
+  }
 }
 
 .arrow-left {
-    left: 205px;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    border-right: 25px solid lightgray;
-    transition: left 0.5s;
+  left: 205px;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid lightgray;
+  transition: left 0.5s;
 }
 
 .arrow-right {
-    right: -515px;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    border-left: 25px solid lightgray;
-    transition: right 0.5s;
+  right: -515px;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid lightgray;
+  transition: right 0.5s;
 }
 
 .arrow-left:hover {
-    left: 195px;
-    border-right: 25px solid #03417B;
+  left: 195px;
+  border-right: 25px solid #03417b;
 }
 
 .arrow-right:hover {
-    right: -530px;
-    border-left: 25px solid #03417B;
+  right: -530px;
+  border-left: 25px solid #03417b;
 }
 
 @media only screen and (min-width: 370px) {
-    .arrow-right {
-        right: -465px;
-    }
+  .arrow-right {
+    right: -465px;
+  }
 
-    .arrow-right:hover {
-        right: -475px;
-    }
+  .arrow-right:hover {
+    right: -475px;
+  }
 }
 
 @media only screen and (min-width: 420px) {
-    .arrow-right {
-        right: -415px;
-    }
+  .arrow-right {
+    right: -415px;
+  }
 
-    .arrow-right:hover {
-        right: -425px;
-    }
+  .arrow-right:hover {
+    right: -425px;
+  }
 }
 
 @media only screen and (min-width: 470px) {
-    .arrow-right {
-        right: -365px;
-    }
+  .arrow-right {
+    right: -365px;
+  }
 
-    .arrow-right:hover {
-        right: -375px;
-    }
+  .arrow-right:hover {
+    right: -375px;
+  }
 }
 
 @media only screen and (min-width: 520px) {
-    .arrow-right {
-        right: -315px;
-    }
+  .arrow-right {
+    right: -315px;
+  }
 
-    .arrow-right:hover {
-        right: -325px;
-    }
+  .arrow-right:hover {
+    right: -325px;
+  }
 }
 
 @media only screen and (min-width: 570px) {
-    .arrow-right {
-        right: -265px;
-    }
+  .arrow-right {
+    right: -265px;
+  }
 
-    .arrow-right:hover {
-        right: -275px;
-    }
+  .arrow-right:hover {
+    right: -275px;
+  }
 }
 
 @media only screen and (min-width: 620px) {
-    .arrow-right {
-        right: -215px;
-    }
+  .arrow-right {
+    right: -215px;
+  }
 
-    .arrow-right:hover {
-        right: -225px;
-    }
+  .arrow-right:hover {
+    right: -225px;
+  }
 }
 
 @media only screen and (min-width: 670px) {
-    .arrow-right {
-        right: -165px;
-    }
+  .arrow-right {
+    right: -165px;
+  }
 
-    .arrow-right:hover {
-        right: -175px;
-    }
+  .arrow-right:hover {
+    right: -175px;
+  }
 }
 
 @media only screen and (min-width: 767px) {
-    .arrow-right {
-        right: -55px;
-    }
+  .arrow-right {
+    right: -55px;
+  }
 
-    .arrow-right:hover {
-        right: -65px;
-    }
+  .arrow-right:hover {
+    right: -65px;
+  }
 }
 
 @media only screen and (min-width: 1023px) {
-    .arrow-right {
-        right: 200px;
-    }
+  .arrow-right {
+    right: 200px;
+  }
 
-    .arrow-right:hover {
-        right: 190px;
-    }
+  .arrow-right:hover {
+    right: 190px;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .arrow-right {
+    right: 445px;
+  }
+
+  .arrow-right:hover {
+    right: 435px;
+  }
 }
 
 @media only screen and (min-width: 1350px) {
-    .arrow-right {
-        right: 530px;
-    }
+  .arrow-right {
+    right: 530px;
+  }
 
-    .arrow-right:hover {
-        right: 520px;
-    }
+  .arrow-right:hover {
+    right: 520px;
+  }
 }
 
 @media only screen and (min-width: 1439px) {
-    .arrow-right {
-        right: 605px;
-    }
+  .arrow-right {
+    right: 605px;
+  }
 
-    .arrow-right:hover {
-        right: 595px;
-    }
+  .arrow-right:hover {
+    right: 595px;
+  }
 }
 
 @media only screen and (min-width: 1550px) {
-    .arrow-right {
-        right: 767px;
-    }
+  .arrow-right {
+    right: 767px;
+  }
 
-    .arrow-right:hover {
-        right: 757px;
-    }
+  .arrow-right:hover {
+    right: 757px;
+  }
 }
 
 @media only screen and (min-width: 1919px) {
-    .arrow-right {
-        right: 1085px;
-    }
+  .arrow-right {
+    right: 1085px;
+  }
 
-    .arrow-right:hover {
-        right: 1075px;
-    }
+  .arrow-right:hover {
+    right: 1075px;
+  }
 }

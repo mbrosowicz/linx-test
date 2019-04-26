@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Linx Test</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/WindowDisplay.css" />
+    <script src="js/WindowDisplay.js"></script>
+    <script src="http://roberval.chaordicsystems.com/challenge/challenge.json?callback=X"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Linx Test</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="styles/WindowDisplay.css" />
-  <script src="js/WindowDisplay.js"></script>
-  <script src="http://roberval.chaordicsystems.com/challenge/challenge.json?callback=X"></script>
-</head>
-
-<body>
-  <div class="slider-block common-font">
-    <div class="items-header"><span class="visited-item-header-text">Você visitou:</span><span
-        class="recommended-items-header-text">E talvez se interesse por:</span></div>
-    <div class="visited-item-content">
-      <div class="slide">
-        <a id="visitedItemDetailUrl" class="detail-link" src="" target="_blank">
-          <img id="visitedItemImage" class="item-image" src="">
-          <p id="visitedItemDescription" class="item-description block-display"></p>
-        </a>
-        <span id="visitedItemOldPrice" class="block-display"></span>
-        <span id="visitedItemNewPrice" class="red-font block-display big-font bold-font"></span>
-        <span id="visitedItemInstallments" class="red-font block-display bold-font"></span>
-        <span class="red-font block-display">sem juros</span>
+  <body>
+    <div class="slider-block common-font">
+      <div class="items-header">
+        <span class="visited-item-header-text">Você visitou:</span
+        ><span class="recommended-items-header-text"
+          >E talvez se interesse por:</span
+        >
+      </div>
+      <div class="visited-item-content">
+        <div class="slide">
+          <a
+            id="visitedItemDetailUrl"
+            class="detail-link"
+            src=""
+            target="_blank"
+          >
+            <img id="visitedItemImage" class="item-image" src="" />
+            <p
+              id="visitedItemDescription"
+              class="item-description block-display"
+            ></p>
+          </a>
+          <span id="visitedItemOldPrice" class="block-display"></span>
+          <span
+            id="visitedItemNewPrice"
+            class="red-font block-display big-font bold-font"
+          ></span>
+          <span
+            id="visitedItemInstallments"
+            class="red-font block-display bold-font"
+          ></span>
+          <span class="red-font block-display">sem juros</span>
+        </div>
+      </div>
+      <div class="recommended-items-content">
+        <div id="slidesContainer" class="slides"></div>
+        <a id="toggleLeft" class="arrow-left"></a>
+        <a id="toggleRight" class="arrow-right"></a>
       </div>
     </div>
-    <div class="recommended-items-content">
-      <div id="slidesContainer" class="slides"></div>
-      <a id="toggleLeft" class="arrow-left"></a>
-      <a id="toggleRight" class="arrow-right"></a>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
